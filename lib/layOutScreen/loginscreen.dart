@@ -6,10 +6,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Login UI',
-      debugShowCheckedModeBanner: false,
-      home: LocationApp(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter Login UI'),
+      ),
+      body: LocationApp(),
     );
   }
 }
@@ -64,9 +65,11 @@ class _LocationAppState extends State<LocationApp> {
                           color: this._color,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: CircleAvatar(child: const FlutterLogo(),
-                        radius:50.0,
-                        backgroundColor: Colors.blueGrey[900],),
+                        child: CircleAvatar(
+                          child: const FlutterLogo(),
+                          radius: 50.0,
+                          backgroundColor: Colors.blueGrey[900],
+                        ),
                       ),
                       SizedBox(
                         height: 6.0,
@@ -155,7 +158,6 @@ class _LocationAppState extends State<LocationApp> {
                           child: FlatButton(
                             onPressed: () {},
                             color: Colors.green[600],
-
                             child: Padding(
                               padding:
                                   const EdgeInsets.symmetric(vertical: 16.0),
